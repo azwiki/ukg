@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UKG Pro Cheat Sheet</title>
+<meta name="description" content="Practical UKG Pro tips for Target team members: schedules, dates, sick time backfill, availability, time off.">
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1d2024; --muted: #5b636d; --line: #e3e6ea;
+    --card: #f6f7f9; --accent: #0b6e69; --warn-bg: #fff6e0; --warn-line: #e8b93a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121417; --fg: #e8eaed; --muted: #9aa3ad; --line: #2a2f35;
+      --card: #1b1f24; --accent: #4fc3b9; --warn-bg: #2b2414; --warn-line: #a8842a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 20px 16px 48px; }
+  h1 { font-size: 1.6rem; line-height: 1.25; margin: 8px 0 4px; }
+  h2 { font-size: 1.2rem; margin: 0 0 10px; scroll-margin-top: 12px; }
+  .sub { color: var(--muted); font-size: .9rem; margin: 0 0 16px; }
+  nav { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; margin-bottom: 20px; }
+  nav ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 20px; font-size: .95rem; }
+  @media (max-width: 420px) { nav ol { columns: 1; } }
+  nav a { color: var(--accent); text-decoration: none; }
+  section { border-top: 1px solid var(--line); padding: 18px 0 6px; }
+  ul, ol { padding-left: 22px; margin: 6px 0 12px; }
+  li { margin: 4px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: .93rem; margin: 6px 0 12px; }
+  th, td { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; }
+  .note { background: var(--warn-bg); border-left: 4px solid var(--warn-line); border-radius: 6px; padding: 10px 12px; margin: 10px 0 14px; }
+  code, .ui { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .88em; background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; }
+  pre { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 10px; overflow-x: auto; font-size: .85rem; }
+  footer { color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line); margin-top: 24px; padding-top: 12px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>UKG Pro Cheat Sheet for Target Team Members</h1>
+  <p class="sub">Field notes from a team member. Not official Target guidance. Updated Nov 8, 2026.</p>
+
+  <nav>
+    <ol>
+      <li><a href="#verify">Verify elsewhere</a></li>
+      <li><a href="#schedule">Check your schedule</a></li>
+      <li><a href="#dates">Dates &amp; silent failures</a></li>
+      <li><a href="#backfill">Sick time (Backfill)</a></li>
+      <li><a href="#availability">Availability</a></li>
+      <li><a href="#timeoff">Separate days off</a></li>
+      <li><a href="#fails">When the app fails</a></li>
+      <li><a href="#managers">For managers</a></li>
+    </ol>
+  </nav>
+
+  <section id="verify">
+    <h2>1. Golden rule: verify somewhere else</h2>
+    <p>Never trust the screen where you made the change. "Submitted" only means received. Balances and timecard change only after <b>Approved</b>, sometimes after an overnight recalculation.</p>
+    <table>
+      <tr><th>What you did</th><th>Where to verify</th></tr>
+      <tr><td>Any request (time off, backfill, availability)</td><td>Control Center → My Requests → tap the request</td></tr>
+      <tr><td>Hours, pay, sick/vacation balance</td><td>Timecard + My Accruals (Available, Planned Takings, Taken)</td></tr>
+      <tr><td>Schedule impact</td><td>My Schedule, on the affected dates</td></tr>
+    </table>
+  </section>
+
+  <section id="schedule">
+    <h2>2. Check your schedule the right way</h2>
+    <p>Filters in My Schedule can hide whole shifts. Missed hidden shifts count as no call / no shows.</p>
+    <ul>
+      <li>Clear filters or select <b>all shift types</b>. Transfer or split shifts (part in another department) may not show under the plain "Shifts" filter.</li>
+      <li>Fewer shifts than usual this week? Assume a display problem first and ask your TL.</li>
+      <li>Screenshot your schedule and copy shifts to your personal calendar.</li>
+    </ul>
+    <div class="note">Several NCNS in a row can trigger <b>automatic termination</b> in the system (reported: 4 consecutive). Symptom: "Team Member is not active" at the time clock. Contact HR right away; reinstatement is possible.</div>
+  </section>
+
+  <section id="dates">
+    <h2>3. Dates: the #1 cause of failed requests</h2>
+    <ul>
+      <li>Use the <b>date picker</b> and tap <b>Done</b>. A typed date can look accepted but not register.</li>
+      <li>Typed it anyway? Press <b>Tab</b> after.</li>
+      <li><b>Next / Submit does nothing = the date was not accepted.</b> The error message may be off-screen.</li>
+      <li>Closing the side panel discards the request with no warning.</li>
+      <li>No toast like "We've received your time-off request" = not submitted.</li>
+    </ul>
+  </section>
+
+  <section id="backfill">
+    <h2>4. Call-offs and sick time (Backfill)</h2>
+    <p>To get sick pay for a past date (for example, the uncovered part of a shift someone partly picked up):</p>
+    <ol>
+      <li>Request time off → type <span class="ui">Backfill – Stores</span></li>
+      <li>Pick the date with the picker → Done → Next.</li>
+      <li>Duration: <b>Hours</b>. Start time = start of the uncovered part; duration = uncovered hours.</li>
+      <li><b>Deduct from:</b> <span class="ui">Pay Hrs – Accrued Sick Time</span>. The default is Vacation, so change it.</li>
+      <li>Submit → wait for the toast → confirm "[Submitted] Backfill" under that date in My Schedule.</li>
+    </ol>
+    <ul>
+      <li>A call-off may be auto-coded <span class="ui">Att – Absent – Other</span> for the whole shift. Backfill adds pay but may not change that code. Ask HR to recode so it isn't an unexcused absence.</li>
+      <li>Backfill is not auto-approved. Sick balance drops only after approval (watch Planned Takings).</li>
+      <li>Backfill has its own <b>submission period</b>, listed on My Schedule.</li>
+      <li>In Arizona, earned paid sick time (A.R.S. § 23-374) can't be counted as an absence for discipline. Other states have their own rules.</li>
+    </ul>
+  </section>
+
+  <section id="availability">
+    <h2>5. Availability changes</h2>
+    <ul>
+      <li>New patterns <b>start on a Sunday</b>, usually about 3 weeks out. Pick the earliest Sunday offered.</li>
+      <li>Use <b>Show list</b>, not the graph, to see exact times.</li>
+      <li>Several days at once: check them → Edit availability → set times → <b>Replace previously scheduled availability</b> (Merge only adds).</li>
+      <li>Block a whole day: Status <b>Unavailable</b>, 12:00 AM – 12:00 AM.</li>
+      <li>On Review, check the +/- hours per day and the weekly total before Submit.</li>
+    </ul>
+    <p><b>Overnight looks wrong but is correct.</b> UKG stores availability per calendar day:</p>
+<pre>Mon 1:00 PM ─────────── Tue 2:00 AM
+  └ Mon: 1PM–12AM ┘└ Tue: 12–2AM ┘</pre>
+    <ul>
+      <li>The 12–2 AM piece is the tail of the previous evening, not an early start.</li>
+      <li>Saturday's after-midnight tail may need an explicit <b>Sunday 12:00–2:00 AM</b> entry.</li>
+      <li>A fully Unavailable day also cuts the previous evening at midnight.</li>
+    </ul>
+  </section>
+
+  <section id="timeoff">
+    <h2>6. Time off for separate days</h2>
+    <ul>
+      <li>Use <b>Add another date</b> to put several non-consecutive days in one request.</li>
+      <li>The request list shows a range ("12/01 – 12/16"). That does <b>not</b> mean every day in between.</li>
+      <li>The real days are in the right panel: <b>Requested Dates → Paycodes</b>.</li>
+      <li>Old requests can sit in Submitted forever. Cancel stale ones so managers aren't confused.</li>
+    </ul>
+  </section>
+
+  <section id="fails">
+    <h2>7. When the app fails</h2>
+    <ul>
+      <li>Set up <b>Face ID / biometric login</b> now, before a 4 AM call-off.</li>
+      <li>Screenshot the error with the time visible. It's your proof.</li>
+      <li>Save the store number. Reported tip: if you hear "this store is not currently open," press <b>0</b> to reach a manager.</li>
+      <li>Pay looks short? Compare Timecard with your own notes and fix it with a punch correction (hours as decimals: 15 min = 0.25).</li>
+    </ul>
+  </section>
+
+  <section id="managers">
+    <h2>8. For managers: why it feels broken</h2>
+    <p>Most "UKG doesn't work" moments are UI and configuration, not failed transactions:</p>
+    <ul>
+      <li>Silent validation: no visible error, the button just does nothing.</li>
+      <li>Panels that discard input without warning.</li>
+      <li>Data shown the way the database stores it (overnight splits, date ranges).</li>
+      <li>Results that appear only after approval or overnight recalculation.</li>
+      <li>Schedule filters that hide transfer/split shifts, followed by automatic attendance points and termination with no human check.</li>
+    </ul>
+    <p>The transaction usually went through. Verify in Control Center or Timecard before re-entering, to avoid duplicates. A quick call to a team member with sudden NCNS can catch a display problem before it becomes a termination.</p>
+  </section>
+
+  <footer>Not affiliated with Target or UKG. Menu names may differ by app version. Corrections welcome.</footer>
+</main>
+</body>
+</html>
