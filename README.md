@@ -96,4 +96,5 @@ Most "UKG doesn't work" moments are **UI and configuration**, not failed transac
 - Results that appear only after approval or overnight recalculation
 
 The transaction usually went through — verify in Control Center / Timecard before re-entering, to avoid duplicates.
-[This page online] (https://azwiki.github.io/ukg/) 
+
+This page online: https://azwiki.github.io/ukg/ 
