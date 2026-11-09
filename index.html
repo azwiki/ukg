@@ -150,16 +150,26 @@
     </ul>
   </section>
 
-  <section id="managers">
+ <section id="managers">
     <h2>8. For managers: why it feels broken</h2>
     <p>Most "UKG doesn't work" moments are UI and configuration, not failed transactions:</p>
-    <ul>
-      <li>Silent validation: no visible error, the button just does nothing.</li>
-      <li>Panels that discard input without warning.</li>
-      <li>Data shown the way the database stores it (overnight splits, date ranges).</li>
-      <li>Results that appear only after approval or overnight recalculation.</li>
-      <li>Schedule filters that hide transfer/split shifts, followed by automatic attendance points and termination with no human check.</li>
-    </ul>
+	<p>Two things combine:</p>
+	<p><strong>1. No feedback on system state.</strong> Most &quot;UKG doesn&#39;t work&quot; moments are UI and configuration, not failed transactions:</p>
+	
+<ul>
+<li>Silent validation: no visible error, the button just does nothing.</li>
+<li>Panels that discard input without warning.</li>
+<li>Data shown the way the database stores it (overnight splits, date ranges).</li>
+<li>Results that appear only after approval or overnight recalculation.</li>
+</ul>
+<p><strong>2. Automatic consequences for failures that aren&#39;t the team member&#39;s.</strong> Schedule filters can hide transfer/split shifts. A missed hidden shift becomes an NCNS, attendance points accrue automatically, and several in a row can deactivate the team member, with no human check at any step. The first visible symptom is often &quot;Team Member is not active&quot; at the time clock, after the damage is done.</p>
+<p>What helps:</p>
+<ul>
+<li>The transaction usually went through. Verify in Control Center or Timecard before re-entering, to avoid duplicates.</li>
+<li>A quick call to a team member with a sudden NCNS can catch a display problem before it turns into a termination.</li>
+<li>If a deactivation was caused by a hidden shift or a silent UI failure, escalate to HR for reinstatement and point recode. Team members&#39; timestamped screenshots are the evidence.</li>
+</ul>
+
     <p>The transaction usually went through. Verify in Control Center or Timecard before re-entering, to avoid duplicates. A quick call to a team member with sudden NCNS can catch a display problem before it becomes a termination.</p>
   </section>
 
@@ -167,3 +177,4 @@
 </main>
 </body>
 </html>
+
